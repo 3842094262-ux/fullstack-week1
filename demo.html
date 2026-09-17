@@ -14,19 +14,11 @@
     const title = document.querySelector("#title");
     const input = document.querySelector("#myInput");
     const btn = document.querySelector("#myBtn");
-
-    // 2. 给按钮绑定“点击事件”
-    btn.addEventListener("click", function () {
+        btn.addEventListener("click", function () {
       // 3. 获取输入框里的内容
       const userText = input.value;
       
-      // 4. 判断并修改标题的内容
-      if (userText === "") {
-        title.innerText = "你什么都没输入！";
-      } else {
-        title.innerText = userText;
-      }
-    });
+      // 4. 直接修改标题
+      title.innerText = userText;
+    }); // <--- 加上这一行！把函数关上！
   </script>
-</body>
-</html>

@@ -1,0 +1,30 @@
+// 1. 获取元素
+const input = document.querySelector("#taskInput");
+const addBtn = document.querySelector("#addBtn");
+const list = document.querySelector("#taskList");
+
+// 2. 添加按钮的点击事件
+addBtn.addEventListener("click", function () {
+  const text = input.value;
+
+  // 如果输入为空，不添加
+  if (text === "") {
+    alert("请先输入待办事项！");
+    return; 
+  }
+
+  // 3. 创建一个新的 li 标签
+  const li = document.createElement("li");
+  li.innerText = text;
+
+  // 4. 给这个 li 添加点击事件（点击就删除）
+  li.addEventListener("click", function () {
+    li.remove(); // 这一句就是删除这个元素
+  });
+
+  // 5. 把新 li 加到列表里
+  list.appendChild(li);
+
+  // 6. 清空输入框，方便下一次输入
+  input.value = "";
+});
