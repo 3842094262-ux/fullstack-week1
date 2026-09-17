@@ -25,4 +25,37 @@ footer {
   padding: 20px;
   text-align: center;
   color: #666;
+}body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* 加了淡蓝色的渐变背景 */
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+header {
+  padding: 60px 20px;
+  text-align: center;
+  /* 头部改成深色，文字变白 */
+  background: #2c3e50;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: -30px auto 0; /* 让主内容往上提一点 */
+  padding: 30px;
+  /* 做一个白色的卡片，加阴影 */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  margin-top: 40px;
 }
